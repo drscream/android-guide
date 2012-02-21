@@ -16,9 +16,16 @@ Das Betriebssystem Android basiert komplett auf offenem Quelltext (Open Source).
 
 Eine gute Übersicht bietet auch die <a href="#android-architektur">Abbildung 1: Android Architektur <a href="#huether10"><cite>huether10</cite></a></a>.
 
-### Android-Laufzeitumgebung
+### Android-Laufzeitumgebung und Bibliotheken
 
+Eine Stufe über dem Linux Kernel befindet sich die Android-Laufzeitumgebung. Die beinhaltet unter anderem die Dalvik VM.
 
+* Android-Laufzeitumgebung: Java Kern Bibliotheken und Dalvik VM 
+* Open GL: 2D und 3D Graphik Bibliothek
+* WebKit: Webbrowser Engine
+* SQLite: Relationale Datenbank
+* Media Framework: Audio und Video Framework
+* SSL Layer: Bibliotheken für die sichere Datenübertragung
 
 ### Anwendungrahmen
 
@@ -35,15 +42,13 @@ Es besteht natürlich weiterhin die Möglichkeit auch auf Ressourcen des Kernsys
 
 Dank Java ist es nicht erforderlich sich um die Speicherverwaltung zu kümmern. Dies wird direkt von der Java Virtual Machine<span class="fn"><a href="http://java.sun.com/docs/books/jvms/">Java Virtual Machine</a></span> übernommen. Die Grundlagen in Programmiersprache sollten für die Entwicklung bekannt sein. Hierzu bietet Oracle verschiedenste Java Tutorials<span class="fn"><a href="http://docs.oracle.com/javase/tutorial/">Java Tutorials</a></span> an. Ein sehr Ausführliches Kurs Buch, Java ist auch eine Insel<span class="fn"><a href="http://openbook.galileocomputing.de/javainsel/">Java ist auch eine Insel</a></span> wird von Galileo Computing als kostenloses Online Buch angeboten.
 
-
 ## Entwicklungsumgebung
 
 Da die Programmierung in Java erfolgt, kann jede beliebige Entwicklungsumgebung oder Editor eingesetzt werden. Eclipse<span class="fn"><a href="http://www.eclipse.org/">Eclipse</a></span> ist zu Empfehlen, da hierfür Erweiterungen für die Android Programmierung vorhanden sind. In dieser Dokumentation wird die Vorbereitung der Entwicklungsumgebung unter Linux beschrieben.
 
+### Java Development Kit (JDK)
 
-### Installation
+### Android SDK
 
-
-
-### Konfiguration
+### Eclipse
 
