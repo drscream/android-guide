@@ -8,3 +8,14 @@
     <span class="bib_publisher">knol, A unit of knowledge</span>, <span class="bib_year">2010</span>.<br>
     <a href="http://knol.google.com/k/d-h/ein-praktischer-einstieg-in-google/2c16g3sx92jxl/2#aspx" class="bib_url">http://knol.google.com/k/d-h/ein-praktischer-einstieg-in-google/2c16g3sx92jxl/2#</a>
 </dd>
+
+<dt id="love07">[dummy11]</dt>
+<dd>
+    <span class="bib_author">Donn Felker und Joshua Dobbs</span>
+    <span class="bib_title">Android Application Development for Dummies</span>.<br>
+    <span class="bib_publisher">Wiley Publishing, Inc.</span>, <span class="bib_year">2011</span>.
+    - <span class="bib_isbn">ISBN 978-0-470-77018-4</span>
+</dd>
+
+
+</dl>
