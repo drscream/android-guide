@@ -72,8 +72,41 @@ Das Android SDK liefert kein Skript zur Installation mit. Eine TAR Archiv beinha
 
 <ol>
   <li>Download der aktuellen SDK Version<span class="fn"><a href="http://developer.android.com/sdk/">Android SDK Download</a></span> für Linux</li>
-
+  <li>Das TAR Archiv sollte nach <i>/opt/</i> entpackt werden
+	<pre><code>$ tar xfz android-sdk_r16-linux.tgz -C /opt
+$ ls /opt/
+android-sdk-linux</code></pre>
+  </li>
+  <li>Die Rechte für das Verzeichnis müssen nach dem extrahieren angepasst werden. In diesem Beispiel erstellen wir eine spezielle <i>android</i> Gruppe, die das SDK ausführen darf.
+	<pre><code>$ addgroup android
+$ adduser max.mustermann android
+$ chown -R root:android /opt/android-sdk-linux</code></pre>
+  </li>
+  <li>Um einfach im Terminal die Befehle aufrufen zu können, muss die PATH Variable angepasst werden. Wird die Bash verwendet, kann dies direkt in die Datei <i>~/.bashrc</i> eingetragen werden. Diese Datei befindet sich im Home Verzeichnis des Benutzers.
+	<pre><code>$ echo "PATH=$PATH:/opt/android-sdk-linux/tools:/opt/android-sdk-linux/platform-tools" >> ~/.bashrc</code></pre>
+  </li>
 </ol>
 
+Da sich in der neuen SDK die Platform-Tools, Beispiele und Dokumentationen nicht mit installiert werden, sollte dies nachgeholt werden. Hierzu starten Sie, via Kommandozeilenbefehl <i>android</i>, den Android SDK Manager<span class="fn"><a href="http://developer.android.com/sdk/adding-components.html">Android SDK Manager</a></span>.
+
+<div class="figure" id="android-sdk-manager">
+	<img src="http://up.frubar.net/1490/2012-02-22-133432_704x655_scrot.png" width="70%" alt="android-sdk-manager" />
+	<p>Bildschirmfoto des Android SDK Manager</p>
+</div>
+
+Falls ein Gerät vorhanden ist, sollte dieses per USB mit dem Computer verbunden werden. Mit folgendem Befehl kann eine Liste alle Geräte angezeigt werden:
+
+<pre><code>$ adb devices
+List of devices attached
+900028b91393	device</code></pre>
+
 ### Eclipse
+
+Eclipse bietet die Grafische Oberfläche der Entwicklungsumgebung. Auf der Website werden viele verschiedene Versionen angeboten, hier ist die Wahl der richtigen Version zu beachten. Da das Paketsystem meist eine alte Version zur Verfügung stellt, sollte diese von der Website heruntergeladen werden.
+
+
+
+
+
+
 
