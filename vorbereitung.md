@@ -98,15 +98,29 @@ Im Gerät sollte das USB Debugging eingeschaltet werden. Sollte dieses per USB m
 
 <pre><code>$ adb devices
 List of devices attached
-900028b91393	device</code></pre>
+900028b91393      device</code></pre>
 
 ### Eclipse
 
-Eclipse bietet die Grafische Oberfläche der Entwicklungsumgebung. Auf der Website werden viele verschiedene Versionen angeboten, hier ist die Wahl der richtigen Version zu beachten. Da das Paketsystem meist eine alte Version zur Verfügung stellt, sollte diese von der Website heruntergeladen werden.
+#### Installation
 
+Eclipse bietet die Grafische Oberfläche der Entwicklungsumgebung. Auf der Website werden viele verschiedene Versionen angeboten, hier ist die Wahl der richtigen Version zu beachten. Da das Paketsystem meist eine alte Version zur Verfügung stellt, sollte diese von der Website<span class="fn"><a href="http://www.eclipse.org/downloads/">Eclipse Website</a></span> heruntergeladen werden. Nutzen Sie die Eclipse IDE für Java Entwickler.
 
+Bei Eclipse handelt es sich ebenso um ein TAR Archiv, welches nach dem entpacken das Programm enthält. Die PATH Variable sollte auch hier wieder erweitert werden.
 
+<pre><code>$ tar xfz eclipse-java-indigo-SR1-linux-gtk-x86_64.tar.gz -C /opt
+$ echo "PATH=$PATH:/opt/eclipse" >> ~/.bashrc</code></pre>
 
+<div class="figure" id="eclipse-screenshot">
+	<img src="http://up.frubar.net/1492/2012-02-22-145117_741x600_scrot.png" width="70%" alt="eclipse-screenshot">
+	<p>Bildschirmfoto von Eclipse</p>
+</div>
 
+#### Android Development Tool (ADT)
 
+Das ADT<span class="fn"><a href="http://developer.android.com/sdk/eclipse-adt.html">Android Development Tool</a></span> ist eine Erweiterung für Eclipse welches die Android Entwicklung erheblich erleichtert. Es bietet unter anderem die Möglichkeit direkt in Eclipse den Android Quelltext zu Debuggen. Das ADT wird in folgenden Schritten installiert.
 
+<ol>
+	<li>Über <i>Help -> Install New Software</i> wird über den </li>
+	
+</ol>
