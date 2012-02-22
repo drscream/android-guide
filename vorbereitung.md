@@ -121,6 +121,21 @@ $ echo "PATH=$PATH:/opt/eclipse" >> ~/.bashrc</code></pre>
 Das ADT<span class="fn"><a href="http://developer.android.com/sdk/eclipse-adt.html">Android Development Tool</a></span> ist eine Erweiterung für Eclipse welches die Android Entwicklung erheblich erleichtert. Es bietet unter anderem die Möglichkeit direkt in Eclipse den Android Quelltext zu Debuggen. Das ADT wird in folgenden Schritten installiert.
 
 <ol>
-	<li>Über <i>Help -> Install New Software</i> wird über den </li>
-	
+	<li>Über <i>Help -> Install New Software</i> wird über den Button <i>Add</i> die ADT Quelle hinzugefügt.
+		<pre><code>https://dl-ssl.google.com/android/eclipse/</code></pre></li>
+	<li>Man wählt die <i>Developer Tools</i> per Check-Box aus und Installiert diese über den Button <i>Next</i>.
+		<div class="figure" id="adt-install">
+		<img src="http://up.frubar.net/1493/2012-02-22-161557_666x722_scrot.png" width="70%" alt="adt-install">
+		<p>Installation von ADT in Eclipse</p>
+		</div>
+	</li>
+	<li>Nach erfolgreicher Installation und einem Neustart von Eclipse, muss Pfad zum Android SDK festgelegt werden. Direkt beim Start wird dieser von einem Wizard abgefragt.
+	<div class="figure" id="eclipse-android-sdk-wizard">
+		<img src="http://up.frubar.net/1494/2012-02-22-162545_606x494_scrot.png" width="70%" alt="eclipse-android-sdk-wizard">
+		<p>Eclipse Wizard für die Android SDK Auswahl</p>
+	</div>
+	</li>
 </ol>
+
+
+
