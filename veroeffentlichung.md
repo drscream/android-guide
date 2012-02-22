@@ -2,6 +2,11 @@
 
 Der Android Markt ist die offizielle Möglichkeit um Anwendungen für Endbenutzer anzubieten. Um viele potentielle Kunden ansprechen zu können ist die Verwendung des Marktes hilfreich. Er bietet Kunden die Möglichkeit Ihre Anwendung zu bewerten, kommentieren und weitere Informationen dazu einzuholen. Entwicklern bietet der Markt statistische Auswertungen der Download und Benutzerzahlen.
 
+<div class="figure" id="android-market">
+	<img src="http://up.frubar.net/1499/2012-02-22-215001_1042x724_scrot.png" alt="android-market" width="70%" />
+	<p>Bildschirmfoto des Android Markt</p>
+</div>
+
 ## APK Datei erstellen
 
 Das Android Projekt wird in eine so genannte Android Paket Datei (APK) gespeichert. Diese Datei muss zwingend durch einen Public/Private-Key-Verfahren signiert werden. Den Privaten Schlüssel behält immer der Entwickler, während der öffentliche Schlüssel den Konsumenten zur Überprüfung zur Verfügung steht.
@@ -21,7 +26,7 @@ Die APK Datei kann auf mehrere verschiedene Arten erstellt werden, zum Beispiel 
 			<p>APK Erstellung, Festlegung des Schlüssel Verzeichnisses</p>
 		</div>
 	</li>
-	<li>Die Schlüsselerstellung erscheint nur, falls noch kein Schlüsselpaar vorhanden ist. In diesem Dialog werden die Schlüsselinformationen festgelegt. Die Informationen des Herausgebers sind Pflichtangaben.
+	<li>Die Schlüsselerstellung erscheint nur, falls noch kein Schlüsselpaar vorhanden ist. In diesem Dialog werden die Schlüsselinformationen festgelegt. Die Informationen des Herausgebers sind Pflichtangaben. <br /> Achtung das Ablaufdatum der Lizenz muss nach dem 22. Oktober 2033 sein. Sonst ist es nicht Möglich die Anwendung im Android Markt zu veröffentlichen. 
 		<div class="figure" id="apk-sign">
 			<img src="http://up.frubar.net/1497/2012-02-22-203130_605x507_scrot.png" alt="apk-sign" width="70%">
 			<p>APK Erstellung, Schlüsselerstellung</p>
@@ -36,3 +41,5 @@ Die APK Datei kann auf mehrere verschiedene Arten erstellt werden, zum Beispiel 
 </ol>
 
 ## Andorid Markt
+
+https://market.android.com/publish
