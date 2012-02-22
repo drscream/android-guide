@@ -48,7 +48,32 @@ Da die Programmierung in Java erfolgt, kann jede beliebige Entwicklungsumgebung 
 
 ### Java Development Kit (JDK)
 
+Es ist zu Empfehlen das JDK aus dem Paketmanagement des Betriebssystems zu installieren. Hier gibt es meist verschiedene Anbieter die JDKs zur Verfügung stellen. Eine sichere Wahl ist aber das JDK von Sun bzw. Oracle.
+
+#### Debian
+
+Unter Debian befindet sich das Sun Java SDK in den <i>non-free</i> Quellen. Hierzu muss eventuell ein zusätzlicher Eintrag in der Datei <i>/etc/apt/sources.list</i> vorgenommen werden. Die Installation erfolgt mit dem Debian Paketmanager <i>aptitude</i>. Als Alternative kann auch <i>apt-get</i> verwendet werden.
+
+<div class="listing" id="sources-listnon-free">
+<pre><code>$ echo "deb http://ftp.de.debian.org/debian/ squeeze non-free" >> /etc/apt/sources.list
+$ aptitude install sun-java6-sdk</code></pre>
+	<p>Hinzufügen non-free Debian Quellen zu sources.list und Installation von Sun Java SDK</p>
+</div>
+
+
+#### Alternative
+
+Sollte kein auf dem System kein Paketmanagement vorhanden sein, ist es auch Möglich das JDK von Oracle Internetseite<span class="fn"><a href="http://www.oracle.com/technetwork/java/javase/downloads">Oracle Internetseite</a></span> herunterzulassen. Da die Seite sehr unübersichtlich wirkt, ist zu Beachten, dass die JDK und nicht JRE Version verwendet wird.
+
+
 ### Android SDK
+
+Das Android SDK liefert kein Skript zur Installation mit. Eine TAR Archiv beinhaltet alle nötigen Dateien, die in den gewünschten Installationspfad entpackt werden. Nach der Installation muss die PATH Variable angepasst werden <a href="#julian10"><cite>julian10</cite></a>. Hierzu wird wie folgt vorgegangen.
+
+<ol>
+  <li>Download der aktuellen SDK Version<span class="fn"><a href="http://developer.android.com/sdk/">Android SDK Download</a></span> für Linux</li>
+
+</ol>
 
 ### Eclipse
 
