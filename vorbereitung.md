@@ -16,6 +16,8 @@ Das Betriebssystem Android basiert komplett auf offenem Quelltext (Open Source).
 
 Eine gute Übersicht bietet auch die <a href="#android-architektur">Abbildung 1: Android Architektur <a href="#huether10"><cite>huether10</cite></a></a>.
 
+---
+
 ### Android-Laufzeitumgebung und Bibliotheken
 
 Eine Stufe über dem Linux Kernel befindet sich die Android-Laufzeitumgebung. Die beinhaltet unter anderem die Dalvik VM.
@@ -65,26 +67,24 @@ $ aptitude install sun-java6-sdk</code></pre>
 
 Sollte kein auf dem System kein Paketmanagement vorhanden sein, ist es auch Möglich das JDK von Oracle Internetseite<span class="fn"><a href="http://www.oracle.com/technetwork/java/javase/downloads">Oracle Internetseite</a></span> herunterzulassen. Da die Seite sehr unübersichtlich wirkt, ist zu Beachten, dass die JDK und nicht JRE Version verwendet wird.
 
+---
 
 ### Android SDK
 
 Das Android SDK liefert kein Skript zur Installation mit. Eine TAR Archiv beinhaltet alle nötigen Dateien, die in den gewünschten Installationspfad entpackt werden. Nach der Installation muss die PATH Variable angepasst werden <a href="#julian10"><cite>julian10</cite></a>. Hierzu wird wie folgt vorgegangen.
 
 <ol>
-  <li>Download der aktuellen SDK Version<span class="fn"><a href="http://developer.android.com/sdk/">Android SDK Download</a></span> für Linux</li>
-  <li>Das TAR Archiv sollte nach <i>/opt/</i> entpackt werden
+	<li>Download der aktuellen SDK Version<span class="fn"><a href="http://developer.android.com/sdk/">Android SDK Download</a></span> für Linux</li>
+	<li>Das TAR Archiv sollte nach <i>/opt/</i> entpackt werden
 	<pre><code>$ tar xfz android-sdk_r16-linux.tgz -C /opt
 $ ls /opt/
-android-sdk-linux</code></pre>
-  </li>
-  <li>Die Rechte für das Verzeichnis müssen nach dem extrahieren angepasst werden. In diesem Beispiel erstellen wir eine spezielle <i>android</i> Gruppe, die das SDK ausführen darf.
+android-sdk-linux</code></pre></li>
+	<li>Die Rechte für das Verzeichnis müssen nach dem extrahieren angepasst werden. In diesem Beispiel erstellen wir eine spezielle <i>android</i> Gruppe, die das SDK ausführen darf.
 	<pre><code>$ addgroup android
 $ adduser max.mustermann android
-$ chown -R root:android /opt/android-sdk-linux</code></pre>
-  </li>
-  <li>Um einfach im Terminal die Befehle aufrufen zu können, muss die PATH Variable angepasst werden. Wird die Bash verwendet, kann dies direkt in die Datei <i>~/.bashrc</i> eingetragen werden. Diese Datei befindet sich im Home Verzeichnis des Benutzers.
-	<pre><code>$ echo "PATH=$PATH:/opt/android-sdk-linux/tools:/opt/android-sdk-linux/platform-tools" >> ~/.bashrc</code></pre>
-  </li>
+$ chown -R root:android /opt/android-sdk-linux</code></pre></li>
+	<li>Um einfach im Terminal die Befehle aufrufen zu können, muss die PATH Variable angepasst werden. Wird die Bash verwendet, kann dies direkt in die Datei <i>~/.bashrc</i> eingetragen werden. Diese Datei befindet sich im Home Verzeichnis des Benutzers.
+	<pre><code>$ echo "PATH=$PATH:/opt/android-sdk-linux/tools:/opt/android-sdk-linux/platform-tools" >> ~/.bashrc</code></pre></li>
 </ol>
 
 Da sich in der neuen SDK die Platform-Tools, Beispiele und Dokumentationen nicht mit installiert werden, sollte dies nachgeholt werden. Hierzu starten Sie, via Kommandozeilenbefehl <i>android</i>, den Android SDK Manager<span class="fn"><a href="http://developer.android.com/sdk/adding-components.html">Android SDK Manager</a></span>.
@@ -99,6 +99,8 @@ Im Gerät sollte das USB Debugging eingeschaltet werden. Sollte dieses per USB m
 <pre><code>$ adb devices
 List of devices attached
 900028b91393      device</code></pre>
+
+---
 
 ### Eclipse
 
