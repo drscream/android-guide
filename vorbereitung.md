@@ -94,7 +94,7 @@ Da sich in der neuen SDK die Platform-Tools, Beispiele und Dokumentationen nicht
 	<p>Bildschirmfoto des Android SDK Manager</p>
 </div>
 
-Falls ein Gerät vorhanden ist, sollte dieses per USB mit dem Computer verbunden werden. Mit folgendem Befehl kann eine Liste alle Geräte angezeigt werden:
+Im Gerät sollte das USB Debugging eingeschaltet werden. Sollte dieses per USB mit dem Computer verbunden werden kann mit folgendem Befehl eine Liste alle Geräte angezeigt werden:
 
 <pre><code>$ adb devices
 List of devices attached
