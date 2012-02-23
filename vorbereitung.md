@@ -57,8 +57,9 @@ Es ist zu Empfehlen das JDK aus dem Paketmanagement des Betriebssystems zu insta
 Unter Debian befindet sich das Sun Java SDK in den <i>non-free</i> Quellen. Hierzu muss eventuell ein zusätzlicher Eintrag in der Datei <i>/etc/apt/sources.list</i> vorgenommen werden. Die Installation erfolgt mit dem Debian Paketmanager <i>aptitude</i>. Als Alternative kann auch <i>apt-get</i> verwendet werden.
 
 <div class="listing" id="sources-listnon-free">
-<pre><code>$ echo "deb http://ftp.de.debian.org/debian/ squeeze non-free" >> /etc/apt/sources.list
-$ aptitude install sun-java6-sdk</code></pre>
+<code><pre>$ echo "deb http://ftp.de.debian.org/debian/ squeeze non-free" \
+	>> /etc/apt/sources.list
+$ aptitude install sun-java6-sdk</pre></code>
 	<p>Hinzufügen non-free Debian Quellen zu sources.list und Installation von Sun Java SDK</p>
 </div>
 
@@ -76,15 +77,16 @@ Das Android SDK liefert kein Skript zur Installation mit. Eine TAR Archiv beinha
 <ol>
 	<li>Download der aktuellen SDK Version<span class="fn"><a href="http://developer.android.com/sdk/">Android SDK Download</a></span> für Linux</li>
 	<li>Das TAR Archiv sollte nach <i>/opt/</i> entpackt werden
-	<pre><code>$ tar xfz android-sdk_r16-linux.tgz -C /opt
+	<code><pre>$ tar xfz android-sdk_r16-linux.tgz -C /opt
 $ ls /opt/
-android-sdk-linux</code></pre></li>
+android-sdk-linux</pre></code></li>
 	<li>Die Rechte für das Verzeichnis müssen nach dem extrahieren angepasst werden. In diesem Beispiel wird eine spezielle <i>android</i> Gruppe erstellt, die das SDK ausführen darf.
-	<pre><code>$ addgroup android
+	<code><pre>$ addgroup android
 $ adduser max.mustermann android
-$ chown -R root:android /opt/android-sdk-linux</code></pre></li>
+$ chown -R root:android /opt/android-sdk-linux</pre></code></li>
 	<li>Um einfach im Terminal die Befehle aufrufen zu können, muss die PATH Variable angepasst werden. Wird die Bash verwendet, kann dies direkt in die Datei <i>~/.bashrc</i> eingetragen werden. Diese Datei befindet sich im Home Verzeichnis des Benutzers.
-	<pre><code>$ echo "PATH=$PATH:/opt/android-sdk-linux/tools:/opt/android-sdk-linux/platform-tools" >> ~/.bashrc</code></pre></li>
+	<code><pre>$ echo "PATH=$PATH:/opt/android-sdk-linux/tools:\
+		/opt/android-sdk-linux/platform-tools" >> ~/.bashrc</pre></code></li>
 </ol>
 
 Da in der neuen SDK die Platform-Tools, Beispiele und Dokumentationen nicht mit installiert werden, sollte dies nachgeholt werden. Hierzu wird, via Kommandozeilenbefehl <i>android</i>, der Android SDK Manager<span class="fn"><a href="http://developer.android.com/sdk/adding-components.html">Android SDK Manager</a></span>, gestartet.
@@ -96,9 +98,10 @@ Da in der neuen SDK die Platform-Tools, Beispiele und Dokumentationen nicht mit 
 
 Im Gerät sollte das USB Debugging eingeschaltet werden. Sollte dieses per USB mit dem Computer verbunden werden, kann mit folgendem Befehl eine Liste alle Geräte angezeigt werden:
 
-<pre><code>$ adb devices
+<code><pre>$ adb devices
 List of devices attached
-900028b91393      device</code></pre>
+900028b91393      device
+</pre></code>
 
 ---
 
@@ -110,8 +113,9 @@ Eclipse bietet die Grafische Oberfläche der Entwicklungsumgebung. Auf der Websi
 
 Bei Eclipse handelt es sich ebenso um ein TAR Archiv, welches nach dem entpacken das Programm enthält. Die PATH Variable sollte auch hier wieder erweitert werden.
 
-<pre><code>$ tar xfz eclipse-java-indigo-SR1-linux-gtk-x86_64.tar.gz -C /opt
-$ echo "PATH=$PATH:/opt/eclipse" >> ~/.bashrc</code></pre>
+<code><pre>$ tar xfz eclipse-java-indigo-SR1-linux-gtk-x86_64.tar.gz -C /opt
+$ echo "PATH=$PATH:/opt/eclipse" >> ~/.bashrc
+</pre></code>
 
 <div class="figure" id="eclipse-screenshot">
 	<img src="http://up.frubar.net/1492/2012-02-22-145117_741x600_scrot.png" width="70%" alt="eclipse-screenshot">
@@ -124,7 +128,8 @@ Das ADT<span class="fn"><a href="http://developer.android.com/sdk/eclipse-adt.ht
 
 <ol>
 	<li>Über <i>Help -> Install New Software</i> wird über den Button <i>Add</i> die ADT Quelle hinzugefügt.
-		<pre><code>https://dl-ssl.google.com/android/eclipse/</code></pre></li>
+		<code><pre>https://dl-ssl.google.com/android/eclipse/</pre></code>
+	</li>
 	<li>Man wählt die <i>Developer Tools</i> per Check-Box aus und Installiert diese über den Button <i>Next</i>.
 		<div class="figure" id="adt-install">
 		<img src="http://up.frubar.net/1493/2012-02-22-161557_666x722_scrot.png" width="70%" alt="adt-install">
@@ -138,6 +143,3 @@ Das ADT<span class="fn"><a href="http://developer.android.com/sdk/eclipse-adt.ht
 	</div>
 	</li>
 </ol>
-
-
-

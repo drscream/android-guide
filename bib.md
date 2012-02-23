@@ -23,8 +23,20 @@
     <span class="bib_title">Android SDK unter Debian Squeeze</span>.<br>
     <span class="bib_publisher">Julians Weblog</span>, <span class="bib_year">2010</span>.<br>
     <a href="http://julian32.wordpress.com/2010/08/09/android-sdk-unter-debian-squeeze/" class="bib_url">http://julian32.wordpress.com/2010/08/09/android-sdk-unter-debian-squeeze/#</a>
-    
-
 </dd>
 
+<dt id="daniel11">[daniel11]</dt>
+<dd>
+	<span class="bib_author">Daniel</span>
+    <span class="bib_title">Android Virtual Device erstellen</span>.<br>
+    <span class="bib_publisher">Tablet Market</span>, <span class="bib_year">2011</span>.<br>
+    <a href="http://tablet-market.de/android-virtual-device-erstellen/" class="bib_url">http://tablet-market.de/android-virtual-device-erstellen/</a>
+</dd>
+
+<dt id="gplatform11">[gplatform11]</dt>
+<dd>
+	<span class="bib_author">Google Inc.</span>
+    <span class="bib_title">Android Developers - Platform Versions</span>.<br>
+    <span class="bib_publisher">Android Developers</span>, <span class="bib_year">2011</span>.<br>
+	<a href="http://developer.android.com/resources/dashboard/platform-versions.html" class="bib_url">http://developer.android.com/resources/dashboard/platform-versions.html</a>
 </dl>
