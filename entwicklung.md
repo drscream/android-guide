@@ -67,7 +67,66 @@ Der Versions-Code (API Level) ist nicht das selbe wie der Versions-Name (Platfor
 
 ### Projektstruktur
 
+Ein Android Projekt beinhaltet eine umfangreiche Ordnerstruktur. Diese Struktur wird automatisch vom Wizard erstellt, es ist dennoch sinnvoll sich diese näher anzusehen. Im Eclipse Package Explorer sind folgende Order zu sehen:
 
+* src
+* gen
+* Android Version (z.B. Android 2.3.3)
+* assets
+* res
+
+<div class="figure" id="eclipse-pkg-exlorer">
+	<img src="http://up.frubar.net/1510/2012-02-23-155432_1366x746_scrot.png" alt="eclipse-pkg-exlorer" width="50%" />
+	<p>Eclipse Package Explorer</p>
+</div>
+
+In einem Projekt können noch weitere Ordner vorhanden sein. Dies sind aber die Standard Ordner, die durch den Wizard erstellt werden. Weitere Ordner können sein <i>bin</i>, <i>libs</i> und <i>referenced libraries</i>.
+
+#### Ordner für den Quelltext (<i>src</i>)
+
+Das <i>src</i> Verzeichnis beinhaltet den Quelltext des Android Projekts. Nach Erstellung des Projekts über den Wizard beinhaltet das Verzeichnis ein weiteres Verzeichnis mit dem Paketnamen. In diesem befindet sich die <i>ProjektnameActivity.java</i> Datei mit einigen Zeilen Java Quelltext.
+
+Ein Android Projekt kann mehrere Pakete und Quelltext-Dateien beinhalten. Als Beispiel könnten zwei weitere Pakete mit Java Klassen vorhanden sein. Eines welches HTTP Klassen beinhaltet und ein weiteres Paket in dem Java Models enthalten sind.
+
+* com.android.example.models
+* com.android.example.http
+
+#### Ordner der Android Bibliothek (<i>Android Version</i>)
+
+Dieses Verzeichnis beinhaltet die SDK Version des verwendeten Android Projekts. Der Inhalt wurde automatisiert erstellt und die Version ist abhängig von der Auswahl des Projekts.
+
+#### Anlagenverzeichnis (<i>assets</i>)
+
+Standardmäßig befinden sich keine Dateien im <i>assets</i> Verzeichnis. Es existiert um <i>raw</i> Binärdaten zu speichern und über die Anwendung darauf zuzugreifen. Für das Verzeichnis gibt es keine Dateibeschränkung, es kann somit jeder beliebiger Inhalt abgelegt werden.
+
+<i>Assets</i> erhalten keine Ressource IDs, somit muss der Zugriff z.B. über die Java Methode <i>InputStream</i> erfolgen. <a href="#zechner11"><cite>zechner11</cite></a>
+
+#### Ressourcen Ordner (<i>res</i>)
+
+Das <i>res</i> Verzeichnis beinhaltet alle Ressourcen die eine Anwendung benötigt. Es ist der von Google empfohlene Weg um Dateien (Ressourcen) in der Anwendung zu benutzen. Im Quelltext kann auf die Ressource via ID zugegriffen werden. Diese wird automatisch per ADT in der <i>R</i> Klasse hinterlegt.
+
+Ein gutes Beispiel für Ressource Dateien sind Bilder. Diese werden im Verzeichnis abgelegt und per Java Quelltext nur referenziert. Das selbe verfahren finden auch Anwendung bei Text Ressourcen (z.B. für verschiedene Sprachen).
+
+Im Ressourcen Verzeichnis existieren Unterordner für spezielle Ressourcen Typen. Zum Beispiel soll eine XML-Datei in einem anderen Ordner abgelegt werden, wie eine PNG-Datei. Es ist nicht zulässig Dateien direkt im <i>res</i> Verzeichnis zu speichern.
+
+<table>
+	<thead>
+		<tr><th>Verzeichnis</th><th>Ressourcen Typ</th></tr>
+	</thead>
+	<tbody>
+		<tr><td><i>anim/</i></td><td>XML Definitionsdateien für Animationen</td></tr>
+		<tr><td><i>color/</i></td><td>XML Dateien für Farbdefinitionen</td></tr>
+		<tr><td><i>drawable/</i></td><td>Bilddateien (.png, .jpg, .gif) oder XML Dateien mit Bildressourcen</td></tr>
+		<tr><td><i>drawable-hdpi/</i></td><td>Selbe wie <i>drawable/</i> jedoch für Hochauflösende Bilder</td></tr>
+		<tr><td><i>drawable-ldpi/</i></td><td>Selbe wie <i>drawable/</i> jedoch für Bilder mit niedriger Auflösung</td></tr>
+		<tr><td><i>drawable-mdpi/</i></td><td>Selbe wie <i>drawable/</i> jedoch für Bilder mit mittlerer Auflösung</td></tr>
+		<tr><td><i>layout/</i></td><td>XML Datei mit der Definition des User-Interfaces</td></tr>
+		<tr><td><i>menu/</i></td><td>Menü der Anwendung als XML Datei</td></tr>
+		<tr><td><i>raw/</i></td><td>Binärdateien die nicht komprimiert werden</td></tr>
+		<tr><td><i>values/</i></td><td>Beliebige XML Dateien, die Strings, Farben oder Integer Werte beinhalten. Das Verzeichnis beinhaltet auch XML Dateien, die auf andere Ressource Dateien verweist. Beispiel Dateien sind:
+			<ul><li><i>arrays.xml</i></li><li><i>colors.xml</i></li><li><i>dimens.xml</i></li><li><i>strings.xml</i></li><li><i>style.xml</i></li></ul></td></tr>
+	</tbody>
+</table>
 
 ## Benutzeroberfläche
 ### Layout

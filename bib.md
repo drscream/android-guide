@@ -13,7 +13,7 @@
 <dd>
     <span class="bib_author">Donn Felker und Joshua Dobbs</span>
     <span class="bib_title">Android Application Development for Dummies</span>.<br>
-    <span class="bib_publisher">Wiley Publishing, Inc.</span>, <span class="bib_year">2011</span>.
+    <span class="bib_publisher">Wiley Publishing, Inc.</span>, <span class="bib_year">2011</span>.<br>
     <span class="bib_isbn">ISBN 978-0-470-77018-4</span>
 </dd>
 
@@ -39,4 +39,23 @@
     <span class="bib_title">Android Developers - Platform Versions</span>.<br>
     <span class="bib_publisher">Android Developers</span>, <span class="bib_year">2011</span>.<br>
 	<a href="http://developer.android.com/resources/dashboard/platform-versions.html" class="bib_url">http://developer.android.com/resources/dashboard/platform-versions.html</a>
+</dd>
+
+<dt id="abook11">[abook11]</dt>
+<dd>
+	<span class="bib_author">visionera GmbH</span>
+    <span class="bib_title">Android 2 - Grundlagen und Programmierung</span>.<br>
+    <span class="bib_publisher">dpunkt.verlag</span>, <span class="bib_year">2011</span>.<br>
+	<span class="bib_isbn">ISBN 978-3-89864-677-2</span>
+</dd>
+
+<dt id="zechner11">[zechner11]</dt>
+<dd>
+	<span class="bib_author">Mario Zechner</span>
+    <span class="bib_title">Spieleentwicklung 101</span>.<br>
+    <span class="bib_publisher">AndroidPit</span>, <span class="bib_year">2011</span>.<br>
+	<a href="http://www.androidpit.de/de/android/wiki/view/Spieleentwicklung_101" class="bib_url">http://www.androidpit.de/de/android/wiki/view/Spieleentwicklung_101</a>
+</dd>
+
+
 </dl>
