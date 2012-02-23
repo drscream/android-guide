@@ -7,7 +7,7 @@ Die Entwicklung für Android kann auf verschiedensten Betriebssystemen erfolgen.
 ## Werkzeuge
 
 ### Linux Kernel
-Das Betriebssystem Android basiert komplett auf offenem Quelltext (Open Source). Der Quelltext<span class="fn"><a href="http://source.android.com/">Android Quelltext</a></span> wird als GIT<span class="fn"><a href="http://git-scm.com/">GIT</a></span> Verzeichnis, für alle Zugänglich, angeboten. Der Linux Kernel bietet die Grundlage für das Android Betriebssystem. Durch Ihn werden unter anderem folgende Funktionen abgebildet:
+Das Betriebssystem Android basiert komplett auf offenem Quelltext (Open Source). Der Quelltext<span class="fn"><a href="http://source.android.com/">Android Quelltext</a></span> wird als GIT<span class="fn"><a href="http://git-scm.com/">GIT</a></span> Verzeichnis, für alle zugänglich, angeboten. Der Linux Kernel bietet die Grundlage für das Android Betriebssystem. Durch ihn werden unter anderem folgende Funktionen abgebildet:
 
 * Speicherverwaltung
 * Prozessverwaltung
@@ -66,7 +66,7 @@ $ aptitude install sun-java6-sdk</pre></code>
 
 #### Alternative
 
-Sollte auf dem System kein Paketmanagement vorhanden sein, ist es auch Möglich das JDK von Oracle Internetseite<span class="fn"><a href="http://www.oracle.com/technetwork/java/javase/downloads">Oracle Internetseite</a></span> herunterzuladen. Da die Seite sehr unübersichtlich wirkt, ist zu Beachten, dass die JDK und nicht JRE Version verwendet wird.
+Sollte auf dem System kein Paketmanagement vorhanden sein, ist es auch Möglich das JDK von Oracle Internetseite<span class="fn"><a href="http://www.oracle.com/technetwork/java/javase/downloads">Oracle Internetseite</a></span> herunterzuladen. Da die Seite sehr unübersichtlich wirkt, ist zu beachten, dass die JDK und nicht JRE Version verwendet wird.
 
 ---
 
@@ -109,7 +109,7 @@ List of devices attached
 
 #### Installation
 
-Eclipse bietet die Grafische Oberfläche der Entwicklungsumgebung. Auf der Website werden viele verschiedene Versionen angeboten, hier ist die Wahl der richtigen Version zu beachten. Da das Paketsystem meist eine alte Version zur Verfügung stellt, sollte diese von der Website<span class="fn"><a href="http://www.eclipse.org/downloads/">Eclipse Website</a></span> heruntergeladen werden. Nutzen Sie die Eclipse IDE für Java Entwickler.
+Eclipse bietet die Grafische Oberfläche der Entwicklungsumgebung. Auf der Website werden viele verschiedene Versionen angeboten, hier ist die Wahl der richtigen Version zu beachten. Da das Paketsystem meist eine alte Version zur Verfügung stellt, sollte diese von der Website<span class="fn"><a href="http://www.eclipse.org/downloads/">Eclipse Website</a></span> heruntergeladen werden. Die Eclipse IDE für Java Entwickler kommt zum Einsatz.
 
 Bei Eclipse handelt es sich ebenso um ein TAR Archiv, welches nach dem entpacken das Programm enthält. Die PATH Variable sollte auch hier wieder erweitert werden.
 
@@ -130,7 +130,7 @@ Das ADT<span class="fn"><a href="http://developer.android.com/sdk/eclipse-adt.ht
 	<li>Über <i>Help -> Install New Software</i> wird über den Button <i>Add</i> die ADT Quelle hinzugefügt.
 		<code><pre>https://dl-ssl.google.com/android/eclipse/</pre></code>
 	</li>
-	<li>Man wählt die <i>Developer Tools</i> per Check-Box aus und Installiert diese über den Button <i>Next</i>.
+	<li>Die <i>Developer Tools</i> sind per Check-Box zu wählen. Die Installiert erfolgt durch betätigen des <i>Next</i> Buttons.
 		<div class="figure" id="adt-install">
 		<img src="http://up.frubar.net/1493/2012-02-22-161557_666x722_scrot.png" width="70%" alt="adt-install">
 		<p>Installation von ADT in Eclipse</p>

@@ -6,14 +6,14 @@
 Nach dem Start von Eclipse muss ein Projekt speziell für Android erstellt werden. Im Abschnitt Installation wurden die nötigen Eclipse Plugins (ADT) für das Projekt installiert.
 
 <ol>
-	<li>Man wählt unter <i>File -> New -> Project</i> den Wizard zur Projekterstellung aus.</li>
+	<li>Unter <i>File -> New -> Project</i> wird der Wizard zur Projekterstellung ausgewählt.</li>
 	<li>Wichtig ist unter dem Reiter <i>Android -> Android Project</i> auszuwählen.
 		<div class="figure" id="new-project-wizard">
 			<img src="http://up.frubar.net/1507/2012-02-22-191712_613x478_scrot.png" alt="new-project-wizard" width="70%" />
 			<p>Wizard zur Erstellung eines neuen Android Projekts in Eclipse</p>
 		</div>
 	</li>
-	<li>Man folgt dem Wizard, bis zur Einstellung für die Anwendungsinformationen. Der Name für den Java Paketnamen ist ein Pflichtfeld. Weitere Informationen zu Java Packages findet man unter anderem im Java Workshop<span class="fn"><a href="http://javaworkshop.sourceforge.net/chapter3.html">Java Workshop, Packages</a></span>. In der SDK Version sollte festgelegt werden welche Android Geräte später unterstützt werden müssen. 
+	<li>Dem Wizard, bis zur Einstellung für die Anwendungsinformationen folgen. Der Name für den Java Paketnamen ist ein Pflichtfeld. Weitere Informationen zu Java Packages sind im Java Workshop<span class="fn"><a href="http://javaworkshop.sourceforge.net/chapter3.html">Java Workshop, Packages</a></span> zu finden. In der SDK Version sollte festgelegt werden welche Android Geräte später unterstützt werden müssen. 
 		<div class="figure" id="new-project-wizard-app-info">
 			<img src="http://up.frubar.net/1508/2012-02-22-201815_605x557_scrot.png" alt="new-project-wizard-app-info" width="70%" />
 			<p>Neues Android Projekt, Anwendungsinformationen festlegen</p>
@@ -23,7 +23,7 @@ Nach dem Start von Eclipse muss ein Projekt speziell für Android erstellt werde
 
 ### Emulation
 
-Der Emulator stellt ein vollwertiges Android Betriebssystem für die spezifizierte Version bereit. In Eclipse befindet sich hierzu der Android Virtual Device (AVD) Manager<span class="fn"><a href="http://developer.android.com/guide/developing/devices/managing-avds.html">Android Virtual Device (AVD) Manager</a></span>. AVDs werden mit <span class="figure"><a href="http://www.qemu.org/">Qemu</a></span> virtualisiert und unterstützen viele verschiedene Android Versionen. Im Android SDK Manager können ggf. andere Android Versionen nachinstalliert werden. <a href="#daniel11"><cite>daniel11</cite></a>
+Der Emulator stellt ein vollwertiges Android Betriebssystem für die spezifizierte Version bereit. In Eclipse befindet sich hierzu der Android Virtual Device (AVD) Manager<span class="fn"><a href="http://developer.android.com/guide/developing/devices/managing-avds.html">Android Virtual Device (AVD) Manager</a></span>. AVDs werden mit <span class="figure"><a href="http://www.qemu.org/">Qemu</a></span> virtualisiert und unterstützen viele verschiedene Android Versionen. Im Android SDK Manager können andere Android Versionen nachinstalliert werden. <a href="#daniel11"><cite>daniel11</cite></a>
 
 <ol>
 	<li>
@@ -93,7 +93,7 @@ Ein Android Projekt kann mehrere Pakete und Quelltext-Dateien beinhalten. Als Be
 
 #### Ordner der Android Bibliothek (<i>Android Version</i>)
 
-Dieses Verzeichnis beinhaltet die SDK Version des verwendeten Android Projekts. Der Inhalt wurde automatisiert erstellt und die Version ist abhängig von der Auswahl des Projekts.
+Dieses Verzeichnis beinhaltet die SDK Version des verwendeten Android Projekts. Der Inhalt wurde automatisiert erstellt, die Version ist abhängig von der Auswahl des Projekts.
 
 #### Anlagenverzeichnis (<i>assets</i>)
 
@@ -105,7 +105,7 @@ Standardmäßig befinden sich keine Dateien im <i>assets</i> Verzeichnis. Es exi
 
 Das <i>res</i> Verzeichnis beinhaltet alle Ressourcen die eine Anwendung benötigt. Es ist der von Google empfohlene Weg um Dateien (Ressourcen) in der Anwendung zu benutzen. Im Quelltext kann auf die Ressource via ID zugegriffen werden. Diese wird automatisch per ADT in der <i>R</i> Klasse hinterlegt.
 
-Ein gutes Beispiel für Ressource Dateien sind Bilder. Diese werden im Verzeichnis abgelegt und per Java Quelltext nur referenziert. Das selbe verfahren finden auch Anwendung bei Text Ressourcen (z.B. für verschiedene Sprachen).
+Ein gutes Beispiel für Ressource Dateien sind Bilder. Diese werden im Verzeichnis abgelegt und per Java Quelltext nur referenziert. Das selbe Verfahren finden auch Anwendung bei Text Ressourcen (z.B. für verschiedene Sprachen).
 
 Im Ressourcen Verzeichnis existieren Unterordner für spezielle Ressourcen Typen. Zum Beispiel soll eine XML-Datei in einem anderen Ordner abgelegt werden, wie eine PNG-Datei. Es ist nicht zulässig Dateien direkt im <i>res</i> Verzeichnis zu speichern.
 
@@ -137,5 +137,8 @@ Im Ressourcen Verzeichnis existieren Unterordner für spezielle Ressourcen Typen
 
 ## Anwendungsfunktionen
 ### Aktivitäten
+
+
+
 ### Ressourcen
 ### Klassen

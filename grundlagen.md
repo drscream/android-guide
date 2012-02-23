@@ -2,7 +2,7 @@
 
 Bei Android handelt es sich um ein Betriebssystem und eine Software Platform für verschiedene Mobile Endgeräte. Die Entwicklung erfolgt durch die Open Handset Alliance<span class="fn"><a href="http://www.openhandsetalliance.com/">Open Handset Alliance</a></span> und wird von Google vorangetrieben. 
 
-Die Basis des Betriebssystem ist der Linux Kernel. Er bildet die Abstraktionsschicht zwischen Hardware und Software, verwalten den Speicher sowie die Prozesse.
+Die Basis des Betriebssystems ist der Linux Kernel. Er bildet die Abstraktionsschicht zwischen Hardware und Software, verwaltet den Speicher sowie die Prozesse.
 
 <div class="figure" id="android-architektur">
 	<img src="http://up.frubar.net/1486/architektur.jpg" width="80%" alt="Andorid Architektur">

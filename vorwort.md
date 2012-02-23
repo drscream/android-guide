@@ -1,6 +1,6 @@
 # Vorwort
 
-In dieser Einführung sollen die Grundlagen zur Entwicklung einer Android Anwendung vermittelt werden. Für Erfahrene Android Entwickler empfiehlt sich diese Dokumentation als Nachschlagewerk.
+In dieser Einführung sollen die Grundlagen zur Entwicklung einer Android Anwendung vermittelt werden. Für erfahrene Android Entwickler empfiehlt sich diese Dokumentation als Nachschlagewerk.
 
 Während des Schreibens der Dokumentation wurde selbst eine Android Anwendung entwickelt. Diese Dokumentation befasst sich aber hauptsächlich mit den Grundlagen und es wird nur teilweise auf die entwickelte Anwendung eingegangen.
 
