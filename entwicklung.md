@@ -2,6 +2,25 @@
 
 ## Übersicht
 ### Eclipse Projekt
+
+Nach dem Start von Eclipse muss ein Projekt speziell für Android erstellt werden. Im Abschnitt Installation wurden die nötigen Eclipse Plugins (ADT) für das Projekt installiert.
+
+<ol>
+	<li>Man wählt unter <i>File -> New -> Project</i> den Wizard zur Projekterstellung aus.</li>
+	<li>Wichtig ist unter dem Reiter <i>Android -> Android Project</i> auszuwählen.
+		<div class="figure" id="new-project-wizard">
+			<img src="http://up.frubar.net/1507/2012-02-22-191712_613x478_scrot.png" alt="new-project-wizard" width="70%" />
+			<p>Wizard zur Erstellung eines neuen Android Projekts in Eclipse</p>
+		</div>
+	</li>
+	<li>Man folgt dem Wizard, bis zur Einstellung für die Anwendungsinformationen. Der Name für den Java Paketnamen ist ein Pflichtfeld. Weitere Informationen zu Java Packages findet man unter anderem im Java Workshop<span class="fn"><a href="http://javaworkshop.sourceforge.net/chapter3.html">Java Workshop, Packages</a></span>. In der SDK Version sollte festgelegt werden welche Android Geräte später unterstützt werden müssen. 
+		<div class="figure" id="new-project-wizard-app-info">
+			<img src="http://up.frubar.net/1508/2012-02-22-201815_605x557_scrot.png" alt="new-project-wizard-app-info" width="70%" />
+			<p>Neues Android Projekt, Anwendungsinformationen festlegen</p>
+		</div>		
+	</li>
+</ol>
+
 ### Emulation
 
 Der Emulator stellt ein vollwertiges Android Betriebssystem für die spezifizierte Version bereit. In Eclipse befindet sich hierzu der Android Virtual Device (AVD) Manager<span class="fn"><a href="http://developer.android.com/guide/developing/devices/managing-avds.html">Android Virtual Device (AVD) Manager</a></span>. AVDs werden mit <span class="figure"><a href="http://www.qemu.org/">Qemu</a></span> virtualisiert und unterstützen viele verschiedene Android Versionen. Im Android SDK Manager können ggf. andere Android Versionen nachinstalliert werden. <a href="#daniel11"><cite>daniel11</cite></a>
