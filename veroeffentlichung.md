@@ -42,4 +42,24 @@ Die APK Datei kann auf mehrere verschiedene Arten erstellt werden, zum Beispiel 
 
 ## Andorid Market
 
-https://market.android.com/publish
+Nachdem die APK Datei erstell wurde, kann diese im Android Market veröffentlicht werden. Ein Google Konto ist Voraussetzung zur Anbietung von Android Anwendungen, dieses kann unter der <span class="fn"><a href="http://www.google.com/accounts">Google Account Verwaltung</a></span> kostenlos erstellt werden.
+
+Zu beachten ist, dass eine einmalige Entwicklungsgebühr von 25 US-Dollar fällig wird um eine Anwendung im Android Market zu veröffentlichen. 
+
+<ol>
+	<li>
+		Die Veröffentlichung erfolgt über die <span class="fn"><a href="http://market.android.com/publish">Publish-Funktion</a></span> der Internetseite des Android Market. Eine Anmeldung per Google Benutzer ist nötig. Die Telefonnummer ist eine Pflichtangabe zur Verifizierung des Benutzerzugangs.
+		<div class="figure" id="android-market-signin">
+			<img src="http://up.frubar.net/1503/2012-02-22-213713_1036x680_scrot.png" width="70%" alt="android-market-signin" />
+			<p>Erstellung eines Entwicklerzugang im Android Market</p>
+		</div>
+	</li>
+	<li>Im nächsten Schritt muss die einmalige Zahlung von 25 US-Dollar erfolgen. Dies geschieht einfach via Kreditkarte oder Google Checkout.</li>
+	<li>
+		In einer einfachen Webmaske kann die APK-Datei, Screenshots, etc. hochgeladen werden. Es sollte eine ausführliche Beschreibung der Anwendung existieren, damit Kunden diese auch finden können.
+		<div class="figure" id="android-market-upload">
+			<img src="http://up.frubar.net/1504/2012-02-22-214807_1030x680_scrot.png" width="70%" alt="android-market-upload" />
+			<p>Veröffentlichung der Android Anwendung</p>
+		</div>
+	</li>
+</ol>
