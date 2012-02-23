@@ -33,7 +33,7 @@
     <a href="http://tablet-market.de/android-virtual-device-erstellen/" class="bib_url">http://tablet-market.de/android-virtual-device-erstellen/</a>
 </dd>
 
-<dt id="gplatform11">[gplatform11]</dt>
+<dt id="gplatform12">[gplatform12]</dt>
 <dd>
 	<span class="bib_author">Google Inc.</span>
     <span class="bib_title">Android Developers - Platform Versions</span>.<br>

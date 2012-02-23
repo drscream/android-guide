@@ -25,7 +25,7 @@ Der Emulator stellt ein vollwertiges Android Betriebssystem für die spezifizier
 
 ### Android Versionen
 
-Der Versions-Code (API Level) ist nicht das selbe wie der Versions-Name (Platform Level). Jeder Versions-Name hat exakt einen Versions-Code. Dies sollte bei der Wahl im Emulator und der Entwicklung beachtet werden. <a href="#gplatform11"><cite>gplatform11</cite></a>
+Der Versions-Code (API Level) ist nicht das selbe wie der Versions-Name (Platform Level). Jeder Versions-Name hat exakt einen Versions-Code. Dies sollte bei der Wahl im Emulator und der Entwicklung beachtet werden. <a href="#gplatform12"><cite>gplatform12</cite></a>
 
 <table>
 	<thead>
