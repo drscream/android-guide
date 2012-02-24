@@ -145,10 +145,11 @@ Bei der Erstellung einer Benutzeroberfläche für Android gibt es verschiedene L
 	</tbody>
 </table>
 
-### Bedienschnittstellen
+### User-Interface in XML
+
+
 
 ### Bilder
-
 #### Bild in das Projekt hinzufügen
 
 Bilder können via <i>Drag & Drop</i> in das Projekt kopiert werden. Die Bilder sollen in die passenden Ordner im Ressource Verzeichnis kopiert werden. 
@@ -188,8 +189,12 @@ Als Beispiel wurde eine Datei <i>test.jpg</i> in das Verzeichnis <i>res/drawable
 <p>Beispiel <i>main.xml</i> Datei mit Verweis auf eine Bilddatei</p>
 </div>
 
+Ein <i>ImageView</i> beinhaltet unter anderem diese Parameter:
 
-
+* <i>android:id="@+id/test_icon"</i>: Eine eindeutige ID für die GUI.
+* <i>android:layout_gravity="center_horizontal"</i>: Einstellung für die Ausrichtung des Bildes. Details zum <i>LinearLayout</i> ist in der Android Dokumentation<span class="fn"><a href="http://developer.android.com/reference/android/widget/LinearLayout.LayoutParams.html">Android Dokumentation, LinearLayout.LayoutParams</a></span> zu finden.
+* <i>android:src="@drawable/test"</i>: Der Parameter ist ein direkter Verweis auf das Bild. Der Verweis erfolgt durch das <i>@</i> Symbol. Die Ressource ID befindet sich in der <i>R.java</i> Datei.
+	
 ### visual Designer
 
 Eclipse bietet einen Designer an um die Oberfläche für Android zu gestalten. Dieser bietet jedoch nicht den vollen Umfang, wie das bearbeiten der XML Datei.
