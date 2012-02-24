@@ -186,8 +186,67 @@ Standardmäßig hat die <i>Activity</i> kein Kenntnis von der Grafische Bedienob
 
 ### Benutzereingabe
 
+Um auf Benutzereingaben reagieren zu können, ist ein <i>Event Listener</i> und <i>Event Handler</i> nötigt.
 
+Als Beispiel für die Tastatur Eingabe, wird die Methode <i>onKeyDown()</i> überschrieben. Diese wird bei jedem Tastendruck aufgerufen und kann somit Aufgaben abfangen und reagieren.
+
+<div class="listing" id="onKeyDown-methode">
+<code><pre>@Override
+public boolean onKeyDown(int keyCode, KeyEvent event) {
+	// TODO Auto-generated method stub 
+	return super.onKeyDown(keyCode, event);
+}</pre></code>
+<p><i>onKeyDown()</i> Methode</p>
+</div>
+
+Dieses Beispiel kann auch bei Touch Eingaben angewandt werden. Unter Android wird jede Betätigung des Bildschirms als Eingabe Event verarbeitet.
 
 ### Event Handler
 
+Wie in der vorherigen Sektion angesprochen, werden <i>Event Handler</i> benötigt um auf Eingaben reagieren zu können. Der unten gezeigte Quelltext reagiert beim betätigen aller Buttons in der grafischen Bedienoberfläche.
 
+<div class="listing" id="onCreate-toggleButton">
+<code><pre>@Override
+public void onCreate(Bundle savedInstanceState) {
+	super.onCreate(savedInstanceState); 
+	setContentView(R.layout.main);
+	
+	Button toggleButton = (Button)findViewById(R.id.toggleButton); 
+	toggleButton.setOnClickListener(new View.OnClickListener() {
+		// [...]
+		
+		public void onClick(View v) {
+			// [...]
+		} 
+	});
+	
+}</pre></code>
+<p>Beispiel Klasse mit Button Listener und Event</p>
+</div>
+
+Die Methode <i>findViewById()</i> wird verwendet um Objekte in der aktuellen Benutzeroberfläche zu finden. Die Methode liefert <i>View</i> Klasse zurück, daher muss diese in ein Button-Objekt umgewandelt werden. 
+
+Der Quelltext um auf das Event zu reagieren ist in die <i>Listener</i> Methode eingebettet. Da dies bei mehr Quelltext zu unübersichtlich werden kann, ist Empfohlen die <i>Listener</i> Methoden auszulagern. Hierzu wird um unten genannten Beispiel, eine Private <i>setButtonClickListener()</i> Methode erstellt, die in der <i>onCreate</i> Methode aufgerufen wird.
+
+<div class="listing" id="onCreate-toggleButton">
+<code><pre>public class NastyActivity extends Activity {
+	/** Called when the activity is first created. */
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState); 
+		setContentView(R.layout.main);
+		
+		setButtonClickListener();
+	}
+	
+	private void setButtonClickListener() {
+		Button toggleButton = (Button)findViewById(R.id.toggleButton);
+		toggleButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+			}
+		});
+	}
+}</pre></code>
+<p>Ausgliederung des Event Listeners in eine eigene Methode</p>
+</div>
