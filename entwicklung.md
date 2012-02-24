@@ -111,7 +111,7 @@ Im Ressourcen Verzeichnis existieren Unterordner für spezielle Ressourcen Typen
 
 <table>
 	<thead>
-		<tr><th>Verzeichnis</th><th>Ressourcen Typ</th></tr>
+		<tr><th width="20%">Verzeichnis</th><th>Ressourcen Typ</th></tr>
 	</thead>
 	<tbody>
 		<tr><td><i>anim/</i></td><td>XML Definitionsdateien für Animationen</td></tr>
@@ -130,10 +130,80 @@ Im Ressourcen Verzeichnis existieren Unterordner für spezielle Ressourcen Typen
 
 ## Benutzeroberfläche
 ### Layout
+
+Bei der Erstellung einer Benutzeroberfläche für Android gibt es verschiedene Layout-Verfahren. Es sollte immer das passende Layout für die Anwendung beziehungsweise die Objekte gewählt werden. Diese Liste beinhaltet nur einen Teil der vorhanden Layout-Verfahren.
+
+<table>
+	<thead>
+		<tr><th>Layout</th><th>Beschreibung</th></tr>
+	</thead>
+	<tbody>
+		<tr><td><i>LinearLayout</i></td><td>Objekte werden in einer Reihe angeordnet.</td></tr>
+		<tr><td><i>RelativeLayout</i></td><td>Es kann die Relation zu anderen Objekten definiert werden.</td></tr>
+		<tr><td><i>FrameLayout</i></td><td>Wurde entwickelt um den kompletten Bildschirm zu blockieren. Objekte werden im linken oberen Eck angezeigt.</td></tr>
+		<tr><td><i>TableLayout</i></td><td>Objekte können in Spalten und Reihen angeordnet werden.</td></tr>
+	</tbody>
+</table>
+
 ### Bedienschnittstellen
+
 ### Bilder
-### Startsymbole
+
+#### Bild in das Projekt hinzufügen
+
+Bilder können via <i>Drag & Drop</i> in das Projekt kopiert werden. Die Bilder sollen in die passenden Ordner im Ressource Verzeichnis kopiert werden. 
+
+Sobald sich ein Bild in Eclipse befindet wird dies automatisch vom ADT erkannt. Das ADT generiert daraufhin die Datei <i>R.java</i> im <i>gen</i> Verzeichnis erneut. In dieser Datei befindet sich nun die Ressource ID für das kopierte Bild.
+
+<div class="listing">
+<code><pre>public final class R {
+	public static final class drawable {
+		public static final int ic_launcher=0x7f020000;
+		public static final int tm=0x7f020001;
+	}
+}</pre></code>
+	<p>Auszug aus der generierten <i>R.java</i> Datei</p>
+</div>
+
+#### Bild in das Layout einbinden
+
+Das Bild sollte nun in das Layout eingebunden werden. Dies kann entweder über den Eclipse visual Designer geschehen oder durch die Bearbeitung der <i>main.xml</i> Datei im <i>res/layout</i> Verzeichnis.
+
+Als Beispiel wurde eine Datei <i>test.jpg</i> in das Verzeichnis <i>res/drawable-mdpi</i> kopiert. Diese wird in einer <i>main.xml</i> Datei wie folgt angegeben.
+
+<div class="listing">
+	<code><pre>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+		&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical"
+			android:layout_width="fill_parent" 
+			android:layout_height="fill_parent" &gt;
+		&lt;ImageView
+			android:id="@+id/test_icon"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:src="@drawable/test" /&gt;
+		&lt;/LinearLayout&gt;
+</pre></code>
+<p>Beispiel <i>main.xml</i> Datei mit Verweis auf eine Bilddatei</p>
+</div>
+
+
+
 ### visual Designer
+
+Eclipse bietet einen Designer an um die Oberfläche für Android zu gestalten. Dieser bietet jedoch nicht den vollen Umfang, wie das bearbeiten der XML Datei.
+
+Um den Designer zu verwenden, muss im <i>res/layout</i> Verzeichnis die gewünschte XML Datei per Doppelklick ausgewählt werden. Mit einem Tab <i>Graphical Layout</i> kann zwischen Designer und XML Datei umgeschaltet werden.
+
+<div class="figure" id="visual-designer">
+	<img src="http://up.frubar.net/1522/2012-02-24-154728_1366x746_scrot.png" alt="visual-designer" width="70%" />
+	<p>Bildschirmfoto des Visual Designers</p>
+</div>
+
+Der Designer ist sehr intuitiv zu bedienen, ist aber nur für einfache grafische Anwendungen geeignet. Die Einstellungen für die einzelnen Elemente sind abhängig vom Layout. Befindet sich ein <i>TextView</i> auf einem <i>LinearLayout</i>, hat dies andere Einstellungen als auf einem <i>RelativeLayout</i>.
+
+
 
 ## Anwendungsfunktionen
 ### Aktivitäten (Activity)
