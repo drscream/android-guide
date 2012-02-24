@@ -136,9 +136,58 @@ Im Ressourcen Verzeichnis existieren Unterordner für spezielle Ressourcen Typen
 ### visual Designer
 
 ## Anwendungsfunktionen
-### Aktivitäten
+### Aktivitäten (Activity)
+
+<i>Activities</i> bilden die Nutzerfunktionen ab, dies bedeutet es sind Interaktionen mit dem Benutzer. Als Beispiel bietet eine <i>Activity</i> die Liste von Menüpunkten an und reagiert auf das drücken eines Buttons. Diese Aktivitäten sind ein wichtiger Bestandteil der Android Entwicklung und werden für jede Anwendung benötigt. Durch die Interaktion mit dem Benutzer, erstellt die <i>Activity</i> Klasse auch die Fenster.
+
+Fast jede Aktivität besteht aus folgenden Methoden:
+
+* <i>onCreate()</i>: Initialisierung der Aktivität. In der Methode wird festgelegt welches Layout verwendet wird.
+* <i>onPause()</i>: Wird verwendet, wenn der Benutzer die Anwendung verlässt. An dieser Stelle sollten die Benutzerdaten gespeichert werden.
+
+Eine <i>Activity</i> wird als <i>Activity Stack</i> verwaltet. Dies bedeutet, sobald eine neue <i>Activity</i> hinzukommt wird diese auf dem <i>Stack</i> abgelegt.
+
+#### Lebenszyklus einer Aktivität
+
+<div class="figure" id="activity-lfe-cycle">
+	<img src="http://up.frubar.net/1519/Beginners_Workshop_Activity_LC.png" alt="activity-lfe-cycle" width="70%" />
+	<p>Lebenszyklus einer Aktivität (Activity) <cite><a href="#woltmann20">woltmann20</a></cite></p>
+</div>
+
+#### Erstellung der ersten <i>Activity</i>
+
+Nachdem das Projekt per Wizard erstellt wurde, existiert schon die erste <i>Activity</i>. Diese befindet sich in der <i>ProjektnameActivity.java</i> Datei. Wie in der <a href="#activity-lfe-cycle">Abbildung zum Lebenszyklus</a> zu sehen ist, startet jede Aktivität mit der <i>onCreate()</i> Methode.
+
+<div class="listing" id="example-activity">
+<code><pre>public class NastyActivity extends Activity {
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+    }
+}</pre></code>
+<p>Beispiel Activity, erstellt vom Wizard</p>
+</div>
+
+Die Basisklasse wird über die folgende Zeile geladen. Sie ist zwingend erforderlich, dass das Programm ausgeführt werden kann.
+
+<div class="listing" id="activity-onCreate">
+<code><pre>super.onCreate(savedInstanceState);</pre></code>
+<p>Aufruf der <i>Activity</i>-Basisklasse</p>
+</div>
+
+Standardmäßig hat die <i>Activity</i> kein Kenntnis von der Grafische Bedienoberflächen. Als Entwickler ist es somit nötig die Verbindung zwischen beiden herzustellen. Um die Bedienoberfläche anzeigen zu lassen, ist folgender Quelltext nötig. Bei <i>R.layout.main</i> handelt es sich um die <i>main.xml</i> Datei im Layout Ressourcen Verzeichnis.
+
+<div class="listing" id="activity-show-content">
+<code><pre>setContentView(R.layout.main);</pre></code>
+<p>Anzeige der Bedienoberfläche über die <i>Activity</i></p>
+</div>
+
+### Benutzereingabe
 
 
 
-### Ressourcen
-### Klassen
+### Event Handler
+
+

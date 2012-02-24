@@ -57,5 +57,12 @@
 	<a href="http://www.androidpit.de/de/android/wiki/view/Spieleentwicklung_101" class="bib_url">http://www.androidpit.de/de/android/wiki/view/Spieleentwicklung_101</a>
 </dd>
 
+<dt id="woltmann20">[woltmann10]</dt>
+<dd>
+	<span class="bib_author">Sven Woltmann</span>
+    <span class="bib_title">Android Anfänger Workshop</span>.<br>
+    <span class="bib_publisher">AndroidPit</span>, <span class="bib_year">2010</span>.<br>
+	<a href="http://www.androidpit.de/de/android/wiki/view/Android_Anfänger_Workshop" class="bib_url">http://www.androidpit.de/de/android/wiki/view/Android_Anfänger_Workshop</a>
+</dd>
 
 </dl>
