@@ -129,6 +129,22 @@ Im Ressourcen Verzeichnis existieren Unterordner für spezielle Ressourcen Typen
 </table>
 
 ## Benutzeroberfläche
+
+### Views
+
+In Android erfolgt die Gestaltung der grafische Benutzeroberfläche in XML Dateien. Man bezeichnet diese auch als <i>View</i>. Es handelt sich dabei um den sichtbaren Teil einer <i>Activity</i>.
+
+Bei jedem hinzufügen einem Element in der GUI wird ein View abgebildet, zum Beispiel bei der Verwendung von <i>Layout</i> oder <i>TextView</i>. In Java müssen <i>Views</i> immer in den passenden Typ umkonvertiert<span class="fn"><a href="http://www.janeg.ca/scjp/oper/cast.html">Java Cast-Operator</a></span> werden.
+
+<div class="listing">
+<code><pre>&lt;TextView
+	android:layout_width="fill_parent" 
+	android:layout_height="wrap_content"
+	android:text="@string/hello"
+	/&gt;</pre></code>
+<p>Beispiel <i>TextView</i></p>
+</div>
+
 ### Layout
 
 Bei der Erstellung einer Benutzeroberfläche für Android gibt es verschiedene Layout-Verfahren. Es sollte immer das passende Layout für die Anwendung beziehungsweise die Objekte gewählt werden. Diese Liste beinhaltet nur einen Teil der vorhanden Layout-Verfahren.
@@ -144,10 +160,6 @@ Bei der Erstellung einer Benutzeroberfläche für Android gibt es verschiedene L
 		<tr><td><i>TableLayout</i></td><td>Objekte können in Spalten und Reihen angeordnet werden.</td></tr>
 	</tbody>
 </table>
-
-### User-Interface in XML
-
-
 
 ### Bilder
 #### Bild in das Projekt hinzufügen
@@ -195,7 +207,7 @@ Ein <i>ImageView</i> beinhaltet unter anderem diese Parameter:
 * <i>android:layout_gravity="center_horizontal"</i>: Einstellung für die Ausrichtung des Bildes. Details zum <i>LinearLayout</i> ist in der Android Dokumentation<span class="fn"><a href="http://developer.android.com/reference/android/widget/LinearLayout.LayoutParams.html">Android Dokumentation, LinearLayout.LayoutParams</a></span> zu finden.
 * <i>android:src="@drawable/test"</i>: Der Parameter ist ein direkter Verweis auf das Bild. Der Verweis erfolgt durch das <i>@</i> Symbol. Die Ressource ID befindet sich in der <i>R.java</i> Datei.
 	
-### visual Designer
+### Visual Designer
 
 Eclipse bietet einen Designer an um die Oberfläche für Android zu gestalten. Dieser bietet jedoch nicht den vollen Umfang, wie das bearbeiten der XML Datei.
 
