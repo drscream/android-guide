@@ -1,6 +1,6 @@
 # Veröffentlichung im Android Market
 
-Der Android Market ist die offizielle Möglichkeit um Anwendungen für Endbenutzer anzubieten. Um viele potentielle Kunden ansprechen zu können ist die Verwendung des Marktes hilfreich. Er bietet Kunden die Möglichkeit Ihre Anwendung zu bewerten, kommentieren und weitere Informationen dazu einzuholen. Entwicklern bietet der Markt statistische Auswertungen der Download- und Benutzerzahlen.
+Der Android Market ist die offizielle Möglichkeit um Anwendungen für Endbenutzer anzubieten. Um viele potentielle Kunden ansprechen zu können ist die Verwendung des Marktes hilfreich. Er bietet Kunden die Möglichkeit eine Anwendung zu bewerten, zu kommentieren und weitere Informationen dazu einzuholen. Entwicklern bietet der Markt statistische Auswertungen der Download- und Benutzerzahlen.
 
 <div class="figure" id="android-market">
 	<img src="http://up.frubar.net/1499/2012-02-22-215001_1042x724_scrot.png" alt="android-market" width="70%" />
@@ -9,9 +9,9 @@ Der Android Market ist die offizielle Möglichkeit um Anwendungen für Endbenutz
 
 ## APK Datei erstellen
 
-Das Android Projekt wird in eine so genannte Android Paket Datei (APK) gespeichert. Diese Datei muss zwingend durch einen Public/Private-Key-Verfahren signiert werden. Den Privaten Schlüssel behält immer der Entwickler, während der öffentliche Schlüssel dem Konsumenten zur Überprüfung zur Verfügung steht.
+Das Android Projekt wird in eine so genannte Android Paket Datei (APK) gespeichert. Diese Datei muss zwingend durch ein Public/Private-Key-Verfahren signiert werden. Den Privaten Schlüssel behält immer der Entwickler, während der öffentliche Schlüssel dem Konsumenten zur Überprüfung zur Verfügung steht.
 
-Die APK Datei kann auf mehrere verschiedene Arten erstellt werden, zum Beispiel per Kommandozeile via <i>ant</i> oder per Continuous Integration Lösung Jenkins. Das Android Development Tool für Eclipse bietet diese Möglichkeit aber auch.
+Die APK Datei kann auf mehrere verschiedene Arten erstellt werden, zum Beispiel per Kommandozeile via <i>ant</i> oder per Continuous Integration Lösung Jenkins. Das Android Development Tool für Eclipse bietet diese Möglichkeit ebenfalls.
 
 <ol>
 	<li>Mit einem Rechtsklick auf das Projekt öffnet sich das Kontextmenü. In diesem wird unter <i>Android Tools</i> der Menüpunkt <i>Export Signed Application Package</i> ausgewählt. Ein Wizard führt durch die einzelnen Optionen.
@@ -22,11 +22,11 @@ Die APK Datei kann auf mehrere verschiedene Arten erstellt werden, zum Beispiel 
 	</li>
 	<li>Sollte noch kein Schlüsselpaar vorhanden sein, wird an dieser Stelle der Pfad und ein Passwort zur Entschlüsselung festgelegt.
 		<div class="figure" id="apk-sign-folder">
-			<img src="http://up.frubar.net/1496/2012-02-22-203014_605x507_scrot.png" alt="apk-sign-folder" width="70%">
+			<img src="http://up.frubar.net/1496/2012-02-22-203014_605x507_scrot.png" alt="apk-sign-folder" width="50%">
 			<p>APK Erstellung, Festlegung des Schlüssel Verzeichnisses</p>
 		</div>
 	</li>
-	<li>Die Schlüsselerstellung erscheint nur, falls noch kein Schlüsselpaar vorhanden ist. In diesem Dialog werden die Schlüsselinformationen festgelegt. Die Informationen des Herausgebers sind Pflichtangaben. <br /> Achtung das Ablaufdatum der Lizenz muss nach dem 22. Oktober 2033 sein. Sonst ist es nicht Möglich die Anwendung im Android Market zu veröffentlichen. 
+	<li>Die Schlüsselerstellung erscheint nur, falls noch kein Schlüsselpaar vorhanden ist. In diesem Dialog werden die Schlüsselinformationen festgelegt. Die Informationen des Herausgebers sind Pflichtangaben. <br /> Zu Beachten ist, dass das Ablaufdatum der Lizenz nach dem 22. Oktober 2033 gelegt sein sollte. Sonst ist es nicht Möglich die Anwendung im Android Market zu veröffentlichen. 
 		<div class="figure" id="apk-sign">
 			<img src="http://up.frubar.net/1497/2012-02-22-203130_605x507_scrot.png" alt="apk-sign" width="70%">
 			<p>APK Erstellung, Schlüsselerstellung</p>
@@ -40,9 +40,11 @@ Die APK Datei kann auf mehrere verschiedene Arten erstellt werden, zum Beispiel 
 	</li>
 </ol>
 
+---
+
 ## Andorid Market
 
-Nachdem die APK Datei erstell wurde, kann diese im Android Market veröffentlicht werden. Ein Google Konto ist Voraussetzung zur Anbietung von Android Anwendungen, dieses kann unter der <span class="fn"><a href="http://www.google.com/accounts">Google Account Verwaltung</a></span> kostenlos erstellt werden.
+Nachdem die APK Datei erstell wurde, kann diese im Android Market veröffentlicht werden. Ein Google Konto ist Voraussetzung zur Anbietung von Android Anwendungen, dieses kann unter der Google Account Verwaltung<span class="fn"><a href="http://www.google.com/accounts">Google Account Verwaltung</a></span> kostenlos erstellt werden.
 
 Zu beachten ist, dass eine einmalige Entwicklungsgebühr von 25 US-Dollar fällig wird um eine Anwendung im Android Market zu veröffentlichen. 
 
@@ -54,7 +56,9 @@ Zu beachten ist, dass eine einmalige Entwicklungsgebühr von 25 US-Dollar fälli
 			<p>Erstellung eines Entwicklerzugang im Android Market</p>
 		</div>
 	</li>
-	<li>Im nächsten Schritt muss die einmalige Zahlung von 25 US-Dollar erfolgen. Dies geschieht einfach via Kreditkarte oder Google Checkout.</li>
+	<li>Im nächsten Schritt muss die einmalige Zahlung von 25 US-Dollar erfolgen. Dies geschieht einfach via Kreditkarte oder Google Checkout.
+		<hr />
+	</li>
 	<li>
 		In einer einfachen Webmaske kann die APK-Datei, Screenshots, etc. hochgeladen werden. Es sollte eine ausführliche Beschreibung der Anwendung existieren, damit Kunden diese auch finden können.
 		<div class="figure" id="android-market-upload">

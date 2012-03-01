@@ -12,8 +12,9 @@ Nach dem Start von Eclipse muss ein Projekt speziell für Android erstellt werde
 			<img src="http://up.frubar.net/1507/2012-02-22-191712_613x478_scrot.png" alt="new-project-wizard" width="70%" />
 			<p>Wizard zur Erstellung eines neuen Android Projekts in Eclipse</p>
 		</div>
+		<hr />
 	</li>
-	<li>Dem Wizard, bis zur Einstellung für die Anwendungsinformationen folgen. Der Name für den Java Paketnamen ist ein Pflichtfeld. Weitere Informationen zu Java Packages sind im Java Workshop<span class="fn"><a href="http://javaworkshop.sourceforge.net/chapter3.html">Java Workshop, Packages</a></span> zu finden. In der SDK Version sollte festgelegt werden welche Android Geräte später unterstützt werden müssen. 
+	<li>Dem Wizard, bis zur Einstellung für die Anwendungsinformationen folgen. Der Name für den Java Paketnamen ist ein Pflichtfeld. Weitere Informationen zu Java Packages sind im Java Workshop<span class="fn"><a href="http://javaworkshop.sourceforge.net/chapter3.html">Java Workshop, Packages</a></span> zu finden. Mit der SDK Version sollte festgelegt werden welche Android Geräte später unterstützt werden müssen. 
 		<div class="figure" id="new-project-wizard-app-info">
 			<img src="http://up.frubar.net/1508/2012-02-22-201815_605x557_scrot.png" alt="new-project-wizard-app-info" width="70%" />
 			<p>Neues Android Projekt, Anwendungsinformationen festlegen</p>
@@ -21,22 +22,24 @@ Nach dem Start von Eclipse muss ein Projekt speziell für Android erstellt werde
 	</li>
 </ol>
 
+---
+
 ### Emulation
 
-Der Emulator stellt ein vollwertiges Android Betriebssystem für die spezifizierte Version bereit. In Eclipse befindet sich hierzu der Android Virtual Device (AVD) Manager<span class="fn"><a href="http://developer.android.com/guide/developing/devices/managing-avds.html">Android Virtual Device (AVD) Manager</a></span>. AVDs werden mit <span class="figure"><a href="http://www.qemu.org/">Qemu</a></span> virtualisiert und unterstützen viele verschiedene Android Versionen. Im Android SDK Manager können andere Android Versionen nachinstalliert werden. <a href="#daniel11"><cite>daniel11</cite></a>
+Der Emulator stellt ein vollwertiges Android Betriebssystem für die spezifizierte Version bereit. In Eclipse befindet sich hierzu der Android Virtual Device (AVD) Manager<span class="fn"><a href="http://developer.android.com/guide/developing/devices/managing-avds.html">Android Virtual Device (AVD) Manager</a></span>. AVDs werden mit Qemu<span class="fn"><a href="http://www.qemu.org/">Qemu</a></span> virtualisiert und unterstützen viele verschiedene Android Versionen. Im Android SDK Manager können andere Android Versionen nachinstalliert werden. <a href="#daniel11"><cite>daniel11</cite></a>
 
 <ol>
 	<li>
 		In der Menüleiste von Eclipse befindet sich ein Icon des AVD Managers, dieser wird per Klick geöffnet.
 		<div class="figure" id="icon-avd">
-			<img src="http://up.frubar.net/1505/2012-02-22-201853_1364x668_scrotKopie.png" alt="icon-avd" width="50%" />
+			<img src="http://up.frubar.net/1505/2012-02-22-201853_1364x668_scrotKopie.png" alt="icon-avd" width="30%" />
 			<p>Icon des AVD Managers in Eclipse</p>
 		</div>
 	</li>
 	<li>
 		Über den Button <i>New</i> wird ein neues Android Virtual Device erstellt. Im Wizard können die Werte meist auf den Standard Einstellungen belassen werden. Wichtig ist die Auswahl der Android Version (API Level).
 		<div class="figure" id="new-avd">
-			<img src="http://up.frubar.net/1506/2012-02-22-201935_550x631_scrot.png" alt="new-avd" width="70%" />
+			<img src="http://up.frubar.net/1506/2012-02-22-201935_550x631_scrot.png" alt="new-avd" width="40%" />
 			<p>Erstellung einer neues AVDs</p>
 		</div>
 	</li>
@@ -86,6 +89,8 @@ In einem Projekt können noch weitere Ordner vorhanden sein. Dies sind aber die 
 
 Das <i>src</i> Verzeichnis beinhaltet den Quelltext des Android Projekts. Nach Erstellung des Projekts über den Wizard beinhaltet das Verzeichnis ein weiteres Verzeichnis mit dem Paketnamen. In diesem befindet sich die <i>ProjektnameActivity.java</i> Datei mit einigen Zeilen Java Quelltext.
 
+---
+
 Ein Android Projekt kann mehrere Pakete und Quelltext-Dateien beinhalten. Als Beispiel könnten zwei weitere Pakete mit Java Klassen vorhanden sein. Eines welches HTTP Klassen beinhaltet und ein weiteres Paket in dem Java Models enthalten sind.
 
 * com.android.example.models
@@ -128,13 +133,15 @@ Im Ressourcen Verzeichnis existieren Unterordner für spezielle Ressourcen Typen
 	</tbody>
 </table>
 
+---
+
 ## Benutzeroberfläche
 
 ### Views
 
 In Android erfolgt die Gestaltung der grafische Benutzeroberfläche in XML Dateien. Man bezeichnet diese auch als <i>View</i>. Es handelt sich dabei um den sichtbaren Teil einer <i>Activity</i>.
 
-Bei jedem hinzufügen einem Element in der GUI wird ein View abgebildet, zum Beispiel bei der Verwendung von <i>Layout</i> oder <i>TextView</i>. In Java müssen <i>Views</i> immer in den passenden Typ umkonvertiert<span class="fn"><a href="http://www.janeg.ca/scjp/oper/cast.html">Java Cast-Operator</a></span> werden.
+Wird ein neuer GUI Baustein per visual Designer hinzugefügt, ist dieser als <i>View</i> in der XML Datei abgebildet. Sobald ein <i>View</i> per Java angesprochen werde muss, ist eine Typenkovertierung<span class="fn"><a href="http://www.janeg.ca/scjp/oper/cast.html">Java Cast-Operator</a></span> erforderlich.
 
 <div class="listing">
 <code><pre>&lt;TextView
@@ -201,6 +208,8 @@ Als Beispiel wurde eine Datei <i>test.jpg</i> in das Verzeichnis <i>res/drawable
 <p>Beispiel <i>main.xml</i> Datei mit Verweis auf eine Bilddatei</p>
 </div>
 
+---
+
 Ein <i>ImageView</i> beinhaltet unter anderem diese Parameter:
 
 * <i>android:id="@+id/test_icon"</i>: Eine eindeutige ID für die GUI.
@@ -232,7 +241,12 @@ Fast jede Aktivität besteht aus folgenden Methoden:
 * <i>onCreate()</i>: Initialisierung der Aktivität. In der Methode wird festgelegt welches Layout verwendet wird.
 * <i>onPause()</i>: Wird verwendet, wenn der Benutzer die Anwendung verlässt. An dieser Stelle sollten die Benutzerdaten gespeichert werden.
 
-Eine <i>Activity</i> wird als <i>Activity Stack</i> verwaltet. Dies bedeutet, sobald eine neue <i>Activity</i> hinzukommt wird diese auf dem <i>Stack</i> abgelegt.
+Eine <i>Activity</i> wird in einem <i>Activity Stack</i> verwaltet. Dies bedeutet, sobald eine neue <i>Activity</i> hinzukommt wird diese auf dem <i>Stack</i> abgelegt.
+
+<div class="figure" id="activity">
+	<img src="http://up.frubar.net/1524/Beginners_Workshop_Activity.png" alt="activity" width="70%" />
+	<p>Zusammenspiel <i>Activity</i> und <i>View</i></p>
+</div>
 
 #### Lebenszyklus einer Aktivität
 
@@ -240,6 +254,8 @@ Eine <i>Activity</i> wird als <i>Activity Stack</i> verwaltet. Dies bedeutet, so
 	<img src="http://up.frubar.net/1519/Beginners_Workshop_Activity_LC.png" alt="activity-lfe-cycle" width="70%" />
 	<p>Lebenszyklus einer Aktivität (Activity) <cite><a href="#woltmann20">woltmann20</a></cite></p>
 </div>
+
+---
 
 #### Erstellung der ersten <i>Activity</i>
 
@@ -270,6 +286,8 @@ Standardmäßig hat die <i>Activity</i> kein Kenntnis von der Grafische Bedienob
 <code><pre>setContentView(R.layout.main);</pre></code>
 <p>Anzeige der Bedienoberfläche über die <i>Activity</i></p>
 </div>
+
+---
 
 ### Benutzereingabe
 

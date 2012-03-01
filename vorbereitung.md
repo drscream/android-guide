@@ -7,7 +7,7 @@ Die Entwicklung für Android kann auf verschiedensten Betriebssystemen erfolgen.
 ## Werkzeuge
 
 ### Linux Kernel
-Das Betriebssystem Android basiert komplett auf offenem Quelltext (Open Source). Der Quelltext<span class="fn"><a href="http://source.android.com/">Android Quelltext</a></span> wird als GIT<span class="fn"><a href="http://git-scm.com/">GIT</a></span> Verzeichnis, für alle zugänglich, angeboten. Der Linux Kernel bietet die Grundlage für das Android Betriebssystem. Durch ihn werden unter anderem folgende Funktionen abgebildet:
+Das Betriebssystem Android basiert komplett auf offenem Quelltext (Open Source). Der Quelltext<span class="fn"><a href="http://source.android.com/">Android Quelltext</a></span> wird in einem GIT<span class="fn"><a href="http://git-scm.com/">GIT</a></span> Repository, für alle zugänglich, angeboten. Der Linux Kernel bietet die Grundlage für das Android Betriebssystem. Durch ihn werden unter anderem folgende Funktionen abgebildet:
 
 * Speicherverwaltung
 * Prozessverwaltung
@@ -31,14 +31,14 @@ Eine Stufe über dem Linux Kernel befindet sich die Android-Laufzeitumgebung. Di
 
 ### Anwendungsrahmen
 
-Das Android Application Framework<span class="fn"><a href="http://developer.android.com/resources/faq/framework.html">Android Application Framework</a></span> macht dem Entwickler viele Funktionen einfach nutzbar. Der Entwickler kann diese Bibliotheken nutzen und muss einige Funktionen nicht selbst implementieren.
+Das Android Application Framework<span class="fn"><a href="http://developer.android.com/resources/faq/framework.html">Android Application Framework</a></span> macht dem Entwickler viele Funktionen einfach nutzbar. Der Entwickler kann diese Bibliotheken nutzen und um häufig benötigte Funktionen nicht selbst implementieren zu müssen.
 
 * Activity Manager
 * Telephony Manager
 * View System
 * Location Manager
 
-Es besteht natürlich weiterhin die Möglichkeit auch auf Ressourcen des Kernsystems zuzugreifen. Hierzu werden vom Android Projekt aber auch viele Ressourcen angeboten. Empfehlenswert ist ein Blick in den Quelltext.
+Es besteht natürlich weiterhin die Möglichkeit auch auf Ressourcen des Kernsystems zuzugreifen. Empfehlenswert ist ein Blick in den Quelltext.
 
 ### Java
 
@@ -59,6 +59,7 @@ Unter Debian befindet sich das Sun Java SDK in den <i>non-free</i> Quellen. Hier
 <div class="listing" id="sources-listnon-free">
 <code><pre>$ echo "deb http://ftp.de.debian.org/debian/ squeeze non-free" \
 	>> /etc/apt/sources.list
+$ aptitude update
 $ aptitude install sun-java6-sdk</pre></code>
 	<p>Hinzufügen non-free Debian Quellen zu sources.list und Installation von Sun Java SDK</p>
 </div>
@@ -66,7 +67,7 @@ $ aptitude install sun-java6-sdk</pre></code>
 
 #### Alternative
 
-Sollte auf dem System kein Paketmanagement vorhanden sein, ist es auch Möglich das JDK von Oracle Internetseite<span class="fn"><a href="http://www.oracle.com/technetwork/java/javase/downloads">Oracle Internetseite</a></span> herunterzuladen. Da die Seite sehr unübersichtlich wirkt, ist zu beachten, dass die JDK und nicht JRE Version verwendet wird.
+Sollte auf dem System kein Paketmanagement vorhanden sein, ist es auch Möglich das JDK von der Oracle Internetseite<span class="fn"><a href="http://www.oracle.com/technetwork/java/javase/downloads">Oracle Internetseite</a></span> herunterzuladen. Da die Seite sehr unübersichtlich wirkt, ist zu beachten, dass die JDK und nicht JRE Version verwendet wird.
 
 ---
 
@@ -80,7 +81,7 @@ Das Android SDK liefert kein Skript zur Installation mit. Eine TAR Archiv beinha
 	<code><pre>$ tar xfz android-sdk_r16-linux.tgz -C /opt
 $ ls /opt/
 android-sdk-linux</pre></code></li>
-	<li>Die Rechte für das Verzeichnis müssen nach dem extrahieren angepasst werden. In diesem Beispiel wird eine spezielle <i>android</i> Gruppe erstellt, die das SDK ausführen darf.
+	<li>Die Rechte für das Verzeichnis müssen nach dem Extrahieren angepasst werden. In diesem Beispiel wird eine spezielle <i>android</i> Gruppe erstellt, die das SDK ausführen darf.
 	<code><pre>$ addgroup android
 $ adduser max.mustermann android
 $ chown -R root:android /opt/android-sdk-linux</pre></code></li>
@@ -96,7 +97,7 @@ Da in der neuen SDK die Platform-Tools, Beispiele und Dokumentationen nicht mit 
 	<p>Bildschirmfoto des Android SDK Manager</p>
 </div>
 
-Im Gerät sollte das USB Debugging eingeschaltet werden. Sollte dieses per USB mit dem Computer verbunden werden, kann mit folgendem Befehl eine Liste alle Geräte angezeigt werden:
+Eines der Werkzeuge in den Android Platform Tools ist <i>adb</i>. Dieses zeigt dem Nutzer eine Liste der per USB Angeschlossenen Android Geräte an. Im Gerät muss hierzu das USB Debugging aktiviert sein.
 
 <code><pre>$ adb devices
 List of devices attached
@@ -109,7 +110,7 @@ List of devices attached
 
 #### Installation
 
-Eclipse bietet die Grafische Oberfläche der Entwicklungsumgebung. Auf der Website werden viele verschiedene Versionen angeboten, hier ist die Wahl der richtigen Version zu beachten. Da das Paketsystem meist eine alte Version zur Verfügung stellt, sollte diese von der Website<span class="fn"><a href="http://www.eclipse.org/downloads/">Eclipse Website</a></span> heruntergeladen werden. Die Eclipse IDE für Java Entwickler kommt zum Einsatz.
+Eclipse bietet die Grafische Oberfläche der Entwicklungsumgebung. Auf der Website werden viele verschiedene Versionen angeboten. Hier ist die Wahl der richtigen Version zu beachten. Da das Paketsystem meist eine alte Version zur Verfügung stellt, sollte diese von der Website<span class="fn"><a href="http://www.eclipse.org/downloads/">Eclipse Website</a></span> heruntergeladen werden. Die Eclipse IDE für Java Entwickler kommt zum Einsatz.
 
 Bei Eclipse handelt es sich ebenso um ein TAR Archiv, welches nach dem entpacken das Programm enthält. Die PATH Variable sollte auch hier wieder erweitert werden.
 
@@ -135,6 +136,7 @@ Das ADT<span class="fn"><a href="http://developer.android.com/sdk/eclipse-adt.ht
 		<img src="http://up.frubar.net/1493/2012-02-22-161557_666x722_scrot.png" width="70%" alt="adt-install">
 		<p>Installation von ADT in Eclipse</p>
 		</div>
+		<br /><br /><br /><br />
 	</li>
 	<li>Nach erfolgreicher Installation und einem Neustart von Eclipse, muss der Pfad zum Android SDK festgelegt werden. Direkt beim Start wird dieser von einem Wizard abgefragt.
 	<div class="figure" id="eclipse-android-sdk-wizard">
